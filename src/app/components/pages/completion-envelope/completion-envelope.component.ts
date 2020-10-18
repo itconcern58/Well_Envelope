@@ -19,8 +19,8 @@ import { ColumnsToolPanelModule } from '@ag-grid-enterprise/column-tool-panel';
   styleUrls: ['./completion-envelope.component.scss']
 })
 export class CompletionEnvelopeComponent implements OnInit {
-  private gridApi;
-  private gridColumnApi;
+  public gridApi;
+  public gridColumnApi;
 
   public modules: Module[] = [
     ClientSideRowModelModule,
@@ -29,10 +29,10 @@ export class CompletionEnvelopeComponent implements OnInit {
     MenuModule,
     ColumnsToolPanelModule,
   ];
-  private columnDefs;
-  private defaultColDef;
-  private detailCellRendererParams;
-  private rowData: any;
+  public columnDefs;
+  public defaultColDef;
+  public detailCellRendererParams;
+  public rowData: any;
   
   constructor(private http: HttpClient) {
     

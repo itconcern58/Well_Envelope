@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-balham-dark.css";
+
+.ag-header-cell-label .ag-header-cell-text {
+    white-space: normal !important;
+    font-size: 11px;
+  }
+
+  .ag-pivot-off .ag-header-group-cell {
+    font-size: 15px;
+    margin-left: 5px;
+  }

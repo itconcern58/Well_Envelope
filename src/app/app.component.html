@@ -1,0 +1,17 @@
+
+<mat-card class="card-style"><h1>PO-STUDIO</h1></mat-card>
+
+<mat-grid-list cols="1" rowHeight="6:1">
+  <mat-grid-tile><a routerLink="/" routerLinkActive="active"><a mat-raised-button class="button-po-main" target="_blank"><img class="button-po-main" src="./assets/image/postudio.png" alt="home-image" /></a></a></mat-grid-tile>
+</mat-grid-list>
+<mat-divider></mat-divider> 
+  <section> 
+    <mat-grid-list cols="3" rowHeight="2:1">                 
+      <mat-grid-tile><a routerLink="/equipment-envelope" routerLinkActive="active"><a mat-raised-button class="button-po" target="_blank"><img class="logo" src="./assets/image/vwr.png" alt="vwr-image" />Equipment Envelope</a></a></mat-grid-tile>
+      <mat-grid-tile><a routerLink="/production-envelope" routerLinkActive="active"><a mat-raised-button class="button-po" target="_blank"><img class="logo" src="./assets/image/agg.png" alt="pro-image" />Production Envelope</a></a></mat-grid-tile>
+      <mat-grid-tile><a routerLink="/completion-envelope" routerLinkActive="active"><a mat-raised-button class="button-po" target="_blank"><img class="logo" src="./assets/image/at.png" alt="com-image" />Completion Envelope</a></a></mat-grid-tile>
+    </mat-grid-list>
+  </section>
+  <mat-divider></mat-divider> 
+<router-outlet></router-outlet>
+  

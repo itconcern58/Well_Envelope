@@ -1,0 +1,15 @@
+<ag-grid-angular
+  style="margin:2vw; width: 95vw; height: 500px;"
+  class="ag-theme-balham-dark"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [modules]="modules"
+  [defaultColDef]="defaultColDef"
+  [masterDetail]="true"
+  [detailCellRendererParams]="detailCellRendererParams"
+  (firstDataRendered)="onFirstDataRendered($event)"
+  (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>
+<router-outlet></router-outlet>
+

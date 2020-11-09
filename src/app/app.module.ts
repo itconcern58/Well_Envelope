@@ -43,7 +43,6 @@ import { ModalBAPComponent } from './components/pages/modal-b-ap/modal-b-ap.comp
 import { ModalVCComponent } from './components/pages/modal-vc/modal-vc.component';
 import { ModalVSComponent } from './components/pages/modal-vs/modal-vs.component';
 import { HornerPlotComponent } from './components/pages/horner-plot/horner-plot.component';
-import { HighchartsChartComponent } from 'highcharts-angular';
 import { ModalPrComponent } from './components/pages/modal-pr/modal-pr.component';
 import { ModalKhComponent } from './components/pages/modal-kh/modal-kh.component';
 import { ModalDdihrComponent } from './components/pages/modal-ddihr/modal-ddihr.component';
@@ -129,8 +128,7 @@ import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-ow
     ModalBAPComponent,
     ModalVCComponent,
     ModalVSComponent,
-    //HornerPlotComponent,
-    HighchartsChartComponent,
+    HornerPlotComponent,
     ModalPrComponent,
     ModalKhComponent,
     ModalDdihrComponent,

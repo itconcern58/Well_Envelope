@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
+import { HighchartsChartComponent } from 'highcharts-angular';
 
 
 const materialModules = [
@@ -17,6 +18,7 @@ const materialModules = [
 
 @NgModule({
   imports: [
+    HighchartsChartComponent,
     CommonModule,
     ...materialModules
   ],

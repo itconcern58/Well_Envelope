@@ -86,6 +86,7 @@ import { ModalSkinOwnComponent } from './../modal-skin-own/modal-skin-own.compon
 import { ModalVcOwnComponent } from './../modal-vc-own/modal-vc-own.component';
 import { ModalVsOwnComponent } from './../modal-vs-own/modal-vs-own.component';
 import { ModalVeOwnComponent } from './../modal-ve-own/modal-ve-own.component';
+import { ModalPiLimComponent } from './../modal-pi-lim/modal-pi-lim.component';
 
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
@@ -483,6 +484,17 @@ open_11Dialog(): void {
         });
       }
 
+       /*---------------------------------------*/
+       open_22Dialog(): void {
+        const dialogRef = this.dialog.open(ModalPiLimComponent, {
+          width: '250px',
+          data: { name: this.name, color: this.color }
+        });
+    
+        dialogRef.afterClosed().subscribe(res => {
+          this.color = res;
+        });
+      }
         /*---------------------------------------*/
         open_23Dialog(): void {
           const dialogRef = this.dialog.open(ModalVcLimComponent, {

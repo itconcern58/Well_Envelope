@@ -17,8 +17,11 @@ const materialModules = [
 ];
 
 @NgModule({
+  declarations: [
+    HighchartsChartComponent
+  ],
   imports: [
-    HighchartsChartComponent,
+
     CommonModule,
     ...materialModules
   ],

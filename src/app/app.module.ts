@@ -108,7 +108,6 @@ import { ModalSkinOwnComponent } from './components/pages/modal-skin-own/modal-s
 import { ModalVcOwnComponent } from './components/pages/modal-vc-own/modal-vc-own.component';
 import { ModalVsOwnComponent } from './components/pages/modal-vs-own/modal-vs-own.component';
 import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-own.component';
-import * as Highcharts from 'highcharts';
 
 @NgModule({
   

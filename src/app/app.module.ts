@@ -116,6 +116,7 @@ import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-ow
     EquipmentEnvelopeComponent,
     ProductionEnvelopeComponent,
     CompletionEnvelopeComponent,
+    HornerPlotComponent,
     MasterEnvelopeComponent,
     MyModalComponent,
     ModalPEComponent,

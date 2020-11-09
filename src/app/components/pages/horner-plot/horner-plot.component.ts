@@ -4,6 +4,7 @@ import regression from 'regression';
 import { ModalAAPComponent } from '../modal-a-ap/modal-a-ap.component';
 import { ModalKhComponent } from './../modal-kh/modal-kh.component';
 import { ModalData } from './../my-modal/modal-data';
+import * as Highcharts;
 
 @Component({
   selector: 'app-horner-plot',

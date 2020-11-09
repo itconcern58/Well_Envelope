@@ -129,7 +129,7 @@ import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-ow
     ModalBAPComponent,
     ModalVCComponent,
     ModalVSComponent,
-    HornerPlotComponent,
+    //HornerPlotComponent,
     HighchartsChartComponent,
     ModalPrComponent,
     ModalKhComponent,

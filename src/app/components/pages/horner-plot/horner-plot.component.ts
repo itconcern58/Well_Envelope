@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import * as Highcharts from 'highcharts';
 import regression from 'regression';
 import { ModalAAPComponent } from '../modal-a-ap/modal-a-ap.component';
 import { ModalKhComponent } from './../modal-kh/modal-kh.component';

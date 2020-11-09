@@ -1,0 +1,24 @@
+
+<div class="column">
+    <div class="modal-head"></div>
+    <h2 mat-dialog-title></h2>
+    <label>Comm</label>
+    <textarea type="text" [(ngModel)]="number1" placeholder=""></textarea><br><br>
+      <!--div mat-dialog-content>
+    
+    <p>What's your favorite color?</p>
+    <mat-form-field>
+      <input type="text" [(ngModel)]="number2" placeholder="1"><br><br>
+      <input matInput [(ngModel)]="data.color">
+  
+      <input type="text" [(ngModel)]="number3" placeholder="1"><br><br>
+    </mat-form-field>
+  </div-->
+  <div mat-dialog-actions>
+    <button class="btnClass" (click)="calcKhOwn()" value="Calc.KhOwn">Submit</button> <br>
+    <button class="buttonClass" mat-button (click)="onNoClick()">No Thanks</button>
+    <button class="buttonClass" mat-button [mat-dialog-close]="data.color" cdkFocusInitial>OK</button>
+    </div> 
+    <br><br>
+  </div>
+

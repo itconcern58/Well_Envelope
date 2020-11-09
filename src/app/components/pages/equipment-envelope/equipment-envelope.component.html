@@ -1,13 +1,162 @@
-<ag-grid-angular
-  style="margin:2vw; width: 95vw; height: 500px;"
-  class="ag-theme-balham-dark"
-  [rowData]="rowData"
-  [columnDefs]="columnDefs"
-  [modules]="modules"
-  [defaultColDef]="defaultColDef"
-  [masterDetail]="true"
-  [detailCellRendererParams]="detailCellRendererParams"
-  (gridReady)="onGridReady($event)"
->
-</ag-grid-angular>
-<router-outlet></router-outlet>
+<br>
+<div class=" calcClass row">
+  <div class="column">
+    <h4>What parameter do you want to calculate? </h4>
+  </div>
+  <div class="column">
+    <select name="itemsToCalculate" class="selectClass">
+      <option value="select">Select</option>
+      <option value="yield_strength_collapse_pressure">Yield Strength Collapse Pressure (PYp)</option>
+      <option value="plastic_collapse_pressure">Plastic Collapse Pressure (Pp)</option>
+      <option value="elastic_pressure">Elastic Pressure (PE)</option>
+      <option value="transition_pressure">Transition Pressure (PT)</option>
+      <option value="a_annulus_pressure">A Annulus Pressure</option>
+      <option value="b_annulus_pressure">B Annulus Pressure</option>
+      <option value="total_drawdown">Total Drawdown</option>
+      <option value="productivity_index">Productivity Index</option>
+      <option value="vc_value">Vc Value</option>
+      <option value="vs_value">Vs Value</option>
+      <option value="skin">Skin</option>
+      <option value="kh">KH</option>
+      <option value="total_depletion">Total Depletion</option>
+    </select> 
+  </div>
+  <div class="row">
+    <div class="column">
+      <h4>Select First Parameter </h4>
+      <select name="itemsToCalculate" class="selectParameter">
+        <option value="select">Select</option>
+        <option value="Yp for PYp">Yield Strength (Yp) for PYp</option>
+        <option value="Yp for Pp">Yield Strength for Pp</option>
+        <option value="Yp for PT">Yield Strength for PT</option>
+        <option value="a_annulus_pressure">A Annulus Pressure</option>
+        <option value="b_annulus_pressure">B Annulus Pressure</option>
+        <option value="total_drawdown">Total Drawdown</option>
+        <option value="productivity_index">Productivity Index</option>
+        <option value="vc_value">Vc Value</option>
+        <option value="vs_value">Vs Value</option>
+        <option value="skin">Skin</option>
+        <option value="kh">KH</option>
+        <option value="total_depletion">Total Depletion</option>
+      </select> 
+    </div>
+    <div class="column">
+      <h4>Input value of parameter selected </h4>
+      <input type="text" [(ngModel)]="number1" placeholder="1"><br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h4>Select Second Parameter </h4>
+      <select name="itemsToCalculate" class="selectParameter">
+        <option value="select">Select</option>
+        <option value="D/t Ratios for PYp">D/t ratios for PYp</option>
+        <option value="D/t Ratios for Pp">D/t for Pp</option>
+        <option value="D/t for calcPE">D/t for PE</option>
+        <option value="D/t Ratios for PT">D/t Ratios for PT</option>
+        <option value="a_annulus_pressure">A Annulus Pressure</option>
+        <option value="b_annulus_pressure">B Annulus Pressure</option>
+        <option value="total_drawdown">Total Drawdown</option>
+        <option value="productivity_index">Productivity Index</option>
+        <option value="vc_value">Vc Value</option>
+        <option value="vs_value">Vs Value</option>
+        <option value="skin">Skin</option>
+        <option value="kh">KH</option>
+        <option value="total_depletion">Total Depletion</option>
+      </select> 
+    </div>
+    <div class="column">
+      <h4>Input value of parameter selected </h4>
+      <input type="text" [(ngModel)]="number2" placeholder="1"><br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+    <h4>Select third Parameter </h4>
+      <select name="itemsToCalculate" class="selectParameter">
+        <option value="select">Select</option>
+        <option value="Factor A for Pp">Factor A for Pp</option>
+        <option value="elastic_pressure">Elastic Pressure</option>
+        <option value="Factor F for PT">Factor A for PT</option>
+        <option value="a_annulus_pressure">A Annulus Pressure</option>
+        <option value="b_annulus_pressure">B Annulus Pressure</option>
+        <option value="total_drawdown">Total Drawdown</option>
+        <option value="productivity_index">Productivity Index</option>
+        <option value="vc_value">Vc Value</option>
+        <option value="vs_value">Vs Value</option>
+        <option value="skin">Skin</option>
+        <option value="kh">KH</option>
+        <option value="total_depletion">Total Depletion</option>
+      </select> 
+    </div>
+    <div class="column">
+      <h4>Input value of parameter selected </h4>
+      <input type="text" [(ngModel)]="number3"><br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h4>Select fourth Parameter </h4>
+      <select name="itemsToCalculate" class="selectParameter">
+        <option value="select">Select</option>
+        <option value="Factor B for Pp"> Factor B for Pp</option>
+        <option value="elastic_pressure">Elastic Pressure</option>
+        <option value="Factor G for PT">Factor G for PT"</option>
+        <option value="a_annulus_pressure">A Annulus Pressure</option>
+        <option value="b_annulus_pressure">B Annulus Pressure</option>
+        <option value="total_drawdown">Total Drawdown</option>
+        <option value="productivity_index">Productivity Index</option>
+        <option value="vc_value">Vc Value</option>
+        <option value="vs_value">Vs Value</option>
+        <option value="skin">Skin</option>
+        <option value="kh">KH</option>
+        <option value="total_depletion">Total Depletion</option>
+      </select> 
+    </div>
+    <div class="column">
+      <h4>Input value of parameter selected </h4>
+      <input type="text" [(ngModel)]="number4"><br><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h4>Select fifth Parameter </h4>
+      <select name="itemsToCalculate" class="selectParameter">
+        <option value="select">Select</option>
+        <option value="Factor C for Pp">Factor C for Pp</option>
+        <option value="elastic_pressure">Elastic Pressure</option>
+        <option value="a_annulus_pressure">A Annulus Pressure</option>
+        <option value="b_annulus_pressure">B Annulus Pressure</option>
+        <option value="total_drawdown">Total Drawdown</option>
+        <option value="productivity_index">Productivity Index</option>
+        <option value="vc_value">Vc Value</option>
+        <option value="vs_value">Vs Value</option>
+        <option value="skin">Skin</option>
+        <option value="kh">KH</option>
+        <option value="total_depletion">Total Depletion</option>
+      </select> 
+    </div>
+    <div class="column">
+      <h4>Input value of parameter selected </h4>
+      <input type="text" [(ngModel)]="number5"><br><br>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col">
+      <button class="buttonClass" (click)="calcPYp()" value="Calc.PYp">Calc.PYp</button> 
+    </div>
+    <div class="col">
+      <button class="buttonClass" (click)="calcPp()" value="Calc.Pp">Calc.Pp</button> 
+    </div>
+    <div class="col">
+      <button class="buttonClass" (click)="calcPT()" value="Calc.PT">Calc.PT</button> 
+    </div>
+    <div class="col">
+      <button class="buttonClass" (click)="calcPE()" value="Calc.PE">Calc.PE</button> 
+    </div>
+  </div>
+</div>
+<br>
+<b>Calculated Result is: </b> <b>{{result}}</b>
+

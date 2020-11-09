@@ -1,0 +1,58 @@
+.column {
+    position: fixed;
+    background-color: gainsboro;
+    border:2px solid  gainsboro;
+    border-radius: 5px;
+    width:30%;
+    top:30%;
+    left:37%;
+}
+
+.modal-head {
+    background-color: darkblue;
+    height: 40px;
+    border:2px solid  gainsboro;
+    border-radius: 5px;
+
+}
+
+label {
+    padding: 20px;
+}
+input[type=text] {
+    background-color: #ddc3f8;
+    color: black;  
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    width: 60%;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.buttonClass {
+    background-color: #490739;
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer;  
+}
+
+.btnClass {
+    background-color: #490739;
+    border-radius: 5px;
+    color: white;
+    padding: 11px 10px;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer;  
+}
+h2 {
+    margin: 10px;
+}
+
+label {
+    width: 15px;
+}

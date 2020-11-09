@@ -8,20 +8,25 @@
 .logo {
     height: 20px;
     width: auto;
-    padding-right: 5px;
+    padding-right: 2px;
     
 }
 .button-po {
-    margin-left: 2.5px;
+    margin-left: 10.5px;
     font-size: 20px;
-    width: 30vw;
+    width: 20vw;
     border: 2px solid;
     border-color: rgb(3, 3, 63);
-    background-color:rgb(201, 228, 250);
+    background-color:rgb(245, 245, 248);
 }
 
 .button-po-main {
-    margin-left: 2.5px;
+    margin-left: 1.5px;
     font-size: 15px;
-    width:7vw;
+    width:2vw;
 }
+
+.container {
+    background-color: limegreen;
+    background-image: url("./../assets/image/postudio.png");
+  }

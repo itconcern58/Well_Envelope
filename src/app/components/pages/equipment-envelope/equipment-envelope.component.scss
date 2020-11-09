@@ -1,0 +1,91 @@
+input[type=text] {
+    background-color: #ddc3f8;
+    color: black;  
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    width: 80%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.calcClass {
+    //border: solid 2px;
+    width: 70%;
+    margin-left: 10%;
+    padding: 10px;
+    background-color: gray;
+    color:white
+}
+
+.selectClass {
+    width: 80%;
+    padding: 18px 22px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #8842d5;  
+}
+
+.selectParameter {
+    width: 80%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    color: brown;
+    background-color: #decaf3;  
+}
+
+.buttonClass {
+    background-color: #490739;
+    border: none;
+    color: white;
+    padding: 18px 36px;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer;  
+}
+
+input[type=text]:focus {
+    width: 80%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 90px; /* Should be removed. Only for demonstration */
+  }
+
+  .buttonCol {
+    float: left;
+    width: 10% !important
+  }
+
+  .buttonRow {
+    float: left;
+    width: 100% !important;
+  }
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Create seven equal columns that floats next to each other */
+  .col {
+    float: left;
+    width: 17%;
+    padding: 10px;
+    height: 90px; /* Should be removed. Only for demonstration */
+  }
+
+  

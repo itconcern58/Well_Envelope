@@ -87,6 +87,8 @@ import { ModalVcOwnComponent } from './../modal-vc-own/modal-vc-own.component';
 import { ModalVsOwnComponent } from './../modal-vs-own/modal-vs-own.component';
 import { ModalVeOwnComponent } from './../modal-ve-own/modal-ve-own.component';
 import { ModalPiLimComponent } from './../modal-pi-lim/modal-pi-lim.component';
+import { ModalFlowCurrComponent } from './../modal-flow-curr/modal-flow-curr.component';
+import { ModalFlowNextComponent } from './../modal-flow-next/modal-flow-next.component';
 
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
@@ -232,6 +234,10 @@ export class CompletionEnvelopeComponent implements OnInit {
   resultVsOwnValueFromService: string = "Owner's name";
   resultVeOwnValue: string = "Owner's name";
   resultVeOwnValueFromService: string = "Owner's name";
+  resultFlowCurrValue: number;
+  resultFlowCurrValueFromService: number;
+  resultFlowNextValue :number;
+  resultFlowNextValueFromService: number;
 
  // Modal ts file
  constructor(public dialog: MatDialog,
@@ -1087,6 +1093,29 @@ open_75Dialog(): void {
     this.color = res;
   });
 }
+/*-------6-------------------------------*/
+open_76Dialog(): void {
+  const dialogRef = this.dialog.open(ModalFlowCurrComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+/*-------6-------------------------------*/
+open_77Dialog(): void {
+  const dialogRef = this.dialog.open(ModalFlowNextComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
 //____________________________________________________________________//
 
 Wells = [
@@ -1354,6 +1383,14 @@ Wells = [
     this.resultVeOwnValue = window.history.state.resultVeOwn;
     // or
     this.resultVeOwnValueFromService = this.sharedService.storeVeOwnValue;
+
+    this.resultFlowCurrValue = window.history.state.resultFlowCurr;
+    // or
+    this.resultFlowCurrValueFromService = this.sharedService.storeFlowCurrValue;
+
+    this.resultFlowNextValue = window.history.state.resultFlowNext;
+    // or
+    this.resultFlowNextValueFromService = this.sharedService.storeFlowNextValue;
   }
 
 }

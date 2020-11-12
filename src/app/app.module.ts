@@ -108,6 +108,8 @@ import { ModalSkinOwnComponent } from './components/pages/modal-skin-own/modal-s
 import { ModalVcOwnComponent } from './components/pages/modal-vc-own/modal-vc-own.component';
 import { ModalVsOwnComponent } from './components/pages/modal-vs-own/modal-vs-own.component';
 import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-own.component';
+import { ModalFlowCurrComponent } from './components/pages/modal-flow-curr/modal-flow-curr.component';
+import { ModalFlowNextComponent } from './components/pages/modal-flow-next/modal-flow-next.component';
 
 @NgModule({
   
@@ -194,6 +196,8 @@ import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-ow
     ModalVcOwnComponent,
     ModalVsOwnComponent,
     ModalVeOwnComponent,
+    ModalFlowCurrComponent,
+    ModalFlowNextComponent,
   ],
   imports: [
     BrowserModule,
@@ -226,13 +230,14 @@ import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-ow
   ModalDdihrComponent, ModalSkComponent, ModalDdComponent, ModalPiComponent, ModalDdlComponent, ModalDdnextComponent, ModalDd1hrLimComponent,
   ModalDd1hrNextComponent, ModalPiNextComponent, ModalVcLimComponent, ModalVsLimComponent, ModalMbhpLimComponent, ModalMbhpCurrComponent,
   ModalFwhtLimComponent, ModalFwhtCurrComponent, ModalAccousSandComponent,  ModalAccousCurrComponent, ModalSkLimComponent,
-ModalKhLimComponent, ModalDepLimComponent, ModalDepCurrComponent, ModalRiskLimComponent, ModalRiskCurrComponent, ModalPypCommComponent,
-ModalPpCommComponent, ModalPtCommComponent, ModalPeCommComponent, ModalAApCommComponent, ModalBApCommComponent, ModalAcouCommComponent,
-ModalDdCommComponent, ModalDd1hrCommComponent, ModalDepCommComponent, ModalFwhtCommComponent, ModalKhCommComponent, ModalMbhpCommComponent,
-ModalPiCommComponent, ModalRiskCommComponent, ModalSkinCommComponent, ModalVcCommComponent, ModalVsCommComponent, ModalVeCommComponent,
-ModalAApOwnComponent, ModalAcouOwnComponent, ModalBApOwnComponent, ModalDdOwnComponent, ModalDd1hrOwnComponent, ModalDepOwnComponent, 
-ModalFwhtOwnComponent, ModalKhOwnComponent, ModalMbhpOwnComponent, ModalPeOwnComponent, ModalPiOwnComponent, ModalPpOwnComponent, ModalPtOwnComponent,
-ModalPypOwnComponent, ModalRiskOwnComponent, ModalSkinOwnComponent, ModalVcOwnComponent, ModalVsOwnComponent, ModalVeOwnComponent  ]
+  ModalKhLimComponent, ModalDepLimComponent, ModalDepCurrComponent, ModalRiskLimComponent, ModalRiskCurrComponent, ModalPypCommComponent,
+  ModalPpCommComponent, ModalPtCommComponent, ModalPeCommComponent, ModalAApCommComponent, ModalBApCommComponent, ModalAcouCommComponent,
+  ModalDdCommComponent, ModalDd1hrCommComponent, ModalDepCommComponent, ModalFwhtCommComponent, ModalKhCommComponent, ModalMbhpCommComponent,
+  ModalPiCommComponent, ModalRiskCommComponent, ModalSkinCommComponent, ModalVcCommComponent, ModalVsCommComponent, ModalVeCommComponent,
+  ModalAApOwnComponent, ModalAcouOwnComponent, ModalBApOwnComponent, ModalDdOwnComponent, ModalDd1hrOwnComponent, ModalDepOwnComponent, 
+  ModalFwhtOwnComponent, ModalKhOwnComponent, ModalMbhpOwnComponent, ModalPeOwnComponent, ModalPiOwnComponent, ModalPpOwnComponent, ModalPtOwnComponent,
+  ModalPypOwnComponent, ModalRiskOwnComponent, ModalSkinOwnComponent, ModalVcOwnComponent, ModalVsOwnComponent, ModalVeOwnComponent, ModalFlowCurrComponent,
+  ModalFlowNextComponent  ]
 })
 
 export class AppModule { }

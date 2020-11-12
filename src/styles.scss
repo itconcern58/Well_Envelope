@@ -12,3 +12,11 @@
     color: white;
     background-color: darkgreen;
   }
+html {
+  //background-color: lightgrey;
+  background-image: url("./assets/image/po-studio-transparent.png");
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: center;
+  background-attachment: fixed;
+}

@@ -1,5 +1,87 @@
+<!--------------------------------------->
+  <!---->
+  <div class="menu">
+    <ul>
+      <li>
+        Equipment
+        <ul>
+          <li class="link">
+            <a href="">Im a link</a>
+          </li>
+          <li class="link">
+            <a href="">Im a link</a>
+          </li>
+          <li>
+            Sign-Post-Limit
+            <ul>
+              <li class="link">
+                <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder=".">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="openDialog()">PYpLim</button>
+              </div>
+              </li>
+              <li class="link">
+                <a href="">Im a link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Dropdown B
+        <ul>
+          <li class="link">
+            <a href="">Im a link</a>
+          </li>
+          <li class="link">
+            <a href="">Im a link</a>
+          </li>
+          <li>
+            Nested dropdown
+            <ul>
+              <li class="link">
+                <a href="">Im a link</a>
+              </li>
+              <li class="link">
+                <a href="">Im a link</a>
+              </li>
+              <li>
+                 Nested dropdown B
+                  <ul>
+                    <li class="link">
+                      <a href="">Im a link</a>
+                    </li>
+                    <li class="link">
+                      <a href="">Im a link</a>
+                    </li>
+                    <li>
+                      Nested dropdown C
+                      <ul>
+                        <li class="link">
+                          <a href="">Im a link</a>
+                        </li>
+                        <li class="link">
+                          <a href="">Im a link</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>             
+            </ul>
+          </li>
+        </ul>
+      </li>     
+      <li class="link">Simple Link</li>
+      <li class="link">Another Link</li>
+    </ul>
+  </div>
+<!--------------------------------------->
 <br>
 <div class="row">
+
+  <!---->
   <div class="column4">
     <div class="dropdown">
       <button class="dropbtn">Equipment</button>
@@ -8,7 +90,7 @@
             <input matInput [(ngModel)]="name" placeholder=".">
           </mat-form-field>
           <div>
-            <button class="btnClass" mat-raised-button (click)="openDialog()">PYp</button>
+            <button class="btnClass" mat-raised-button (click)="openDialog()">PYpLim</button>
           </div>
           <mat-form-field>
             <input matInput [(ngModel)]="name" placeholder=".">
@@ -1211,10 +1293,21 @@
     <table>
       <thead>
         <tr>
-          <th colspan="10"><h2 class="tb-head">eTe Optimiza Technologies LLC </h2></th>
+          <th><img style="width:60%" src="./../../../../assets/image/logo_ete.PNG" alt="logo"/></th>
+          <th colspan="7"><h2 class="tb-head">Well Operating Envelope Dashboard</h2></th>
+          <th colspan="2"></th>
         </tr>
         <tr>
-          <th colspan="10"><h2 class="tb-head">Well Operating Envelope Dashboard</h2></th>
+          <th></th>
+          <th></th>
+          <th colspan="2" class="tb-head1">Company:</th>
+          <th colspan="3" class="tb-head1">eTe Optimiza Technologies LLC </th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th colspan="10"></th>
         </tr>
           <tr>
             <th class="tb-head1">Asset:</th>
@@ -1251,103 +1344,136 @@
           </tr>
         </thead>
       <tr>
-        <th></th>
-        <th>Sign-Post</th>
-        <th>Symbol</th>
-        <th>Units</th>
-        <th>Sign-Post-Limit</th>
-        <th>Sign-Post-Flag</th>
-        <th>Current Period Flow Conditions</th>
-        <th>Next Period Flow Conditions</th>
-        <th>Commentary</th>
-        <th>Sign-Post-Owner</th>
+        <th class="tb-head2">Envelope</th>
+        <th class="tb-head2">Sign-Post</th>
+        <th class="tb-head2">Symbol</th>
+        <th class="tb-head2">Units</th>
+        <th class="tb-head2 signLimit">Sign-Post-Limit</th>
+        <th class="tb-head2 signFlag">Sign-Post-Flag</th>
+        <th class="tb-head2">Current Period Flow Conditions</th>
+        <th class="tb-head2">Next Period Flow Conditions</th>
+        <th class="tb-head2">Commentary</th>
+        <th class="tb-head2">Sign-Post-Owner</th>
       </tr>
       <tr>
-        <td>Equipment</td>
+        <th colspan="3"></th>
+        <th>
+          <select name="search_categories" id="search_categories">
+            <option value="1" selected="selected">stb/d</option>
+            <option value="2">MMscfd</option>
+            </select>
+        </th>
+        <th class=signLimit></th>
+        <th class=signFlag></th>
+        <th class="tb-head1">{{this.sharedService.storeFlowCurrValue}}</th>
+        <th class="tb-head1">{{this.sharedService.storeFlowNextValue}}</th>
+        <th></th>
+        <th></th>
+      <tr>
+        <th colspan="4"></th>
+        <th class=signLimit></th>
+        <th class=signFlag></th>
+        <th class="tb-head1">
+          <mat-form-field>
+            <input matInput [(ngModel)]="name" placeholder="">
+          </mat-form-field>
+          <button class="btnClass" mat-raised-button (click)="open_76Dialog()">QCurr</button>
+        </th>
+        <th class="tb-head1">
+          <mat-form-field>
+            <input matInput [(ngModel)]="name" placeholder="">
+          </mat-form-field>
+          <button class="btnClass" mat-raised-button (click)="open_77Dialog()">QNext</button>
+        </th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td class="tb-head3">Equipment</td>
         <td>Yield Strength Collapse</td>
         <td >PYp</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storePYpValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagPYpValue}}</td>
-        <td></td>
-        <td></td>
+        <td class="tb-body1"></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storePypCommValue}}</td>
         <td>{{this.sharedService.storePypOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head3"></td>
         <td>Plastic Collapse</td>
         <td >Pp</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storePpValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagPpValue}}</td>
-        <td></td>
-        <td></td>
+        <td class="tb-body1"></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storePpCommValue}}</td>
         <td>{{this.sharedService.storePpOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class=" tb-head3"></td>
         <td>Transition Collapse</td>
         <td >PT</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storePtValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagPtValue}}</td>
-        <td></td>
-        <td></td>
+        <td class="tb-body1"></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storePtCommValue}}</td>
         <td>{{this.sharedService.storePtOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head3"></td>
         <td>Elastic Collapse</td>
-        <td >PE</td>
+        <td>PE</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storePeValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagPeValue}}</td>
-        <td></td>
-        <td></td>
+        <td class="tb-body1"></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storePeCommValue}}</td>
         <td>{{ this.sharedService.storePeOwnValue }}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class=" tb-head3"></td>
         <td>Erosion Velocity</td>
         <td>Ve</td>
         <td>ft/s</td>
         <td class="signLimit">{{this.sharedService.storeVeValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagVeValue}}</td>
-        <td></td>
-        <td></td>
+        <td class="tb-body1"></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storeVeCommValue}}</td>
         <td>{{this.sharedService.storeVeOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class=" tb-head3"></td>
         <td>A Annulus Pressure</td>
         <td>A-Ap</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storeAApValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagAApValue}}</td>
-        <td></td>
-        <td></td>
+        <td class="tb-body1"></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storeAapCommValue}}</td>
         <td>{{this.sharedService.storeAapOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class=" tb-head3"></td>
         <td>B Annulus Pressure</td>
         <td>B-Ap</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storeBApValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagBApValue}}</td>
-        <td></td>
-        <td></td>
+        <td class="tb-body1"></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storeBapCommValue}}</td>
         <td>{{ this.sharedService.storeBapOwnValue }}</td>
       </tr>
       <tr>
-        <td>Production</td>
+        <td class="tb-head4">Production</td>
         <td>Total DrawDown</td>
         <td>DD</td>
         <td>psi</td>
@@ -1359,7 +1485,7 @@
         <td>{{ this.sharedService.storeDdOwnValue }}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head4"></td>
         <td>DrawDown 1hr</td>
         <td>DD1hr</td>
         <td>psi</td>
@@ -1371,122 +1497,122 @@
         <td>{{ this.sharedService.storeDd1hrOwnValue }}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head4"></td>
         <td>Productivity Index</td>
         <td>PI</td>
         <td>Trend</td>
         <td class="signLimit">{{this.sharedService.storePiLimValue}}</td>
         <td class="signFlag">{{this.sharedService.storeSignPostFlagPiLimValue}}</td>
         <td>{{ this.sharedService.storeDiffPiValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storePiCommValue}}</td>
         <td>{{this.sharedService.storePiOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head4"></td>
         <td>Casing Flow Velocity</td>
         <td>Vc</td>
         <td>ft/s</td>
         <td class="signLimit">{{this.sharedService.storeVcLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagVcLimValue}}</td>
         <td>{{ this.sharedService.storeVccurrValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storeVcCommValue}}</td>
         <td>{{this.sharedService.storeVcOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head4"></td>
         <td>Screen Flow Velocity</td>
         <td>Vs</td>
-        <td>ft/s</td>
+        <td class="tb-body1">ft/s</td>
         <td class="signLimit">{{this.sharedService.storeVsLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagVsLimValue}}</td>
         <td>{{ this.sharedService.storeVscurrValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storeVsCommValue}}</td>
         <td>{{this.sharedService.storeVsOwnValue}}</td>
       </tr>
       <tr>
-        <td>Well Integrity/ Completion</td>
+        <td class="tb-head5">Well Integrity/ Completion</td>
         <td>Minimum Bottom Hole Pressure</td>
         <td>MBHP</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storeMbhpLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagMbhpLimValue}}</td>
         <td>{{ this.sharedService.storeMbhpCurrValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{ this.sharedService.storeMbhpCommValue }}</td>
         <td>{{ this.sharedService.storeMbhpOwnValue }}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head5"></td>
         <td>Flowing WellHead Temperature</td>
         <td>FWHT</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storeFwhtLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagFwhtLimValue}}</td>
         <td>{{ this.sharedService.storeFwhtCurrValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{ this.sharedService.storeFwhtCommValue }}</td>
         <td>{{this.sharedService.storeFwhtOwnValue}}</td>
       </tr>
       <tr>
-        <td>Reservoir</td>
+        <td class="tb-head6">Reservoir</td>
         <td>Acoustic Sand Detector Activity</td>
         <td>ACOU</td>
         <td>Trend</td>
         <td class="signLimit">{{this.sharedService.storeAcouLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagAcouLimValue}}</td>
         <td>{{ this.sharedService.storeAcouCurrValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{ this.sharedService.storeAcouCommValue }}</td>
         <td>{{ this.sharedService.storeAcouOwnValue }}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head6"></td>
         <td>Skin</td>
         <td>SK</td>
         <td>Trend</td>
         <td class="signLimit">{{this.sharedService.storeSkinLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagSkinLimValue}}</td>
         <td>{{ this.sharedService.storeDiffSKValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storeSkinCommValue}}</td>
         <td>{{this.sharedService.storeSkinOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head6"></td>
         <td>Permeability-Height</td>
         <td>KH</td>
         <td>Trend</td>
         <td class="signLimit">{{this.sharedService.storeKhLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagKhLimValue}}</td>
         <td>{{ this.sharedService.storeKHDiffValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{ this.sharedService.storeKHCommValue }}</td>
         <td>{{this.sharedService.storeKhOwnValue}}</td>
       </tr>
       <tr>
-        <td></td>
+        <td class="tb-head6"></td>
         <td>Total Depletion</td>
         <td>DEP</td>
         <td>psi</td>
         <td class="signLimit">{{this.sharedService.storeDepLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagDeplimValue}}</td>
         <td>{{ this.sharedService.storeDepCurrValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{ this.sharedService.storeDepCommValue }}</td>
         <td>{{ this.sharedService.storeDepOwnValue }}</td>
       </tr>
       <tr>
-        <td>Team</td>
+        <td class=tb-head7>Team</td>
         <td>Overall Risk of Optimization</td>
         <td>RISK</td>
         <td>L/M/H</td>
         <td class="signLimit">{{this.sharedService.storeRiskLimValue}}</td>
         <td class="signFlag">{{this.sharedService.signPostFlagRiskLimValue}}</td>
         <td>{{ this.sharedService.storeRiskCurrValue }}</td>
-        <td></td>
+        <td class="tb-body1"></td>
         <td>{{this.sharedService.storeRiskCommValue}}</td>
         <td>{{this.sharedService.storeRiskOwnValue}}</td>
       </tr>

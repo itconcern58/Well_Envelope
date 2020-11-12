@@ -109,6 +109,8 @@ export class SharedServiceService {
     storeVcOwnValue: string = "Owner's name";
     storeVsOwnValue: string = "Owner's name";
     storeVeOwnValue: string = "Owner's name";
+    storeFlowCurrValue: number
+    storeFlowNextValue: number
 
     constructor() {}
 }

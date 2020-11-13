@@ -1,545 +1,790 @@
-<!--------------------------------------->
-  <!---->
-  <div class="menu">
-    <ul>
-      <li>
-        Equipment
-        <ul>
-          <li class="link">
-            <a href="">Im a link</a>
-          </li>
-          <li class="link">
-            <a href="">Im a link</a>
-          </li>
-          <li>
-            Sign-Post-Limit
-            <ul>
-              <li class="link">
-                <mat-form-field>
+<br>
+<div class="menu">
+   <ul>
+     <li>
+      <button class="dropbtn">Equipment</button>
+       <ul>
+         <li>
+           Sign-Post-Limit
+           <ul>
+             <li>
+              <mat-form-field>
                 <input matInput [(ngModel)]="name" placeholder=".">
               </mat-form-field>
               <div>
                 <button class="btnClass" mat-raised-button (click)="openDialog()">PYpLim</button>
               </div>
-              </li>
-              <li class="link">
-                <a href="">Im a link</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        Dropdown B
-        <ul>
-          <li class="link">
-            <a href="">Im a link</a>
-          </li>
-          <li class="link">
-            <a href="">Im a link</a>
-          </li>
-          <li>
-            Nested dropdown
-            <ul>
-              <li class="link">
-                <a href="">Im a link</a>
-              </li>
-              <li class="link">
-                <a href="">Im a link</a>
-              </li>
-              <li>
-                 Nested dropdown B
-                  <ul>
-                    <li class="link">
-                      <a href="">Im a link</a>
-                    </li>
-                    <li class="link">
-                      <a href="">Im a link</a>
-                    </li>
-                    <li>
-                      Nested dropdown C
-                      <ul>
-                        <li class="link">
-                          <a href="">Im a link</a>
-                        </li>
-                        <li class="link">
-                          <a href="">Im a link</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>             
-            </ul>
-          </li>
-        </ul>
-      </li>     
-      <li class="link">Simple Link</li>
-      <li class="link">Another Link</li>
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_2Dialog()">PpLim</button>
+              </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_3Dialog()">PTLim</button>
+              </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_1Dialog()">PELim</button>
+              </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_4Dialog()">VeLim</button>
+              </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_7Dialog()">A-ApLim</button>
+              </div> 
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_8Dialog()">B-ApLim</button>
+              </div>
+             </li>
+           </ul>
+         </li>
+         <li>
+          Sign-Post-Flag
+          <ul>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Commentary
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder=".">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_38Dialog()">PypComm</button>
+              </div>
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_39Dialog()">PpComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_40Dialog()">PtComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_41Dialog()">PeComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_56Dialog()">VeComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_42Dialog()">A-ApComm</button>
+              </div>
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_44Dialog()">B-ApComm</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sign-Post-Owner
+          <ul>
+            <li class="link">
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+            <div>
+              <button class="btnClass" mat-raised-button (click)="open_70Dialog()">PypOwn</button>
+            </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+                <div>
+                  <button class="btnClass" mat-raised-button (click)="open_68Dialog()">PpOwn</button>
+                </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_69Dialog()">PtOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_66Dialog()">PeOwn</button>
+              </div>    
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_75Dialog()">VeOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_57Dialog()">A-ApOwn</button>
+              </div>      
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_59Dialog()">B-ApOwn</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+       </ul>
+     </li>
+     <li>
+      <button class="dropbtn">Production</button>
+       <ul>
+         <li>
+           Sign-Post-Limit
+           <ul>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+            <div>
+              <button class="btnClass" mat-raised-button (click)="open_17Dialog()">DDLim</button>
+            </div> 
+             </li>
+             <li class="link">
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_19Dialog()">DD1hrLim</button>
+              </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_22Dialog()">PILim</button>
+              </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_23Dialog()">VcLim</button>
+              </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_24Dialog()">VsLim</button>
+              </div>  
+             </li>
+           </ul>
+         </li>
+         <li>
+         Sign-Post-Flag
+          <ul>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Current Flow Period
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_9Dialog()">DDCurr</button>
+              </div>  
+            </li>
+            <li> 
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_10Dialog()">DD1hrCurr</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_11Dialog()">PICurr</button>
+              </div> 
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_12Dialog()">VcCurr</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_13Dialog()">VsCurr</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Next Flow Period
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_18Dialog()">DDNext</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_20Dialog()">DD1hrNext</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Commentary
+          <ul>
+            <li>
+                <mat-form-field>
+                  <input matInput [(ngModel)]="name" placeholder="">
+                </mat-form-field>
+                <div>
+                  <button class="btnClass" mat-raised-button (click)="open_45Dialog()">DDComm</button>
+                </div> 
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_46Dialog()">DD1hrComm</button>
+              </div> 
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_51Dialog()">PIComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_54Dialog()">VcComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_55Dialog()">VsComm</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sign-Post-Owner
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_60Dialog()">DDOwn</button>
+              </div> 
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_61Dialog()">DD1hrOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_67Dialog()">PIOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field> 
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_73Dialog()">VcOwn</button>
+              </div>          
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_74Dialog()">VsOwn</button>
+              </div> 
+            </li>
+          </ul>
+        </li>
+       </ul>
+     </li> 
+     <li>
+      <button class="dropbtn">Well Integrity</button>
+       <ul>
+         <li>
+           Sign-Post-Limit
+           <ul>
+             <li>
+                <mat-form-field>
+                  <input matInput [(ngModel)]="name" placeholder="">
+                </mat-form-field>
+                <div>
+                  <button class="btnClass" mat-raised-button (click)="open_25Dialog()">MBHPLim</button>
+                </div>  
+             </li>
+             <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+                <div>
+                  <button class="btnClass" mat-raised-button (click)="open_27Dialog()">FWHTLim</button>
+                </div>  
+             </li>
+           </ul>
+         </li>
+         <li>
+         Sign-Post-Flag
+          <ul>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Current Flow Period
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_26Dialog()">MBHPCurr</button>
+              </div> 
+            </li>
+            <li> 
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_28Dialog()">FWHTCurr</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Commentary
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_50Dialog()">MBHPComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_48Dialog()">FWHTComm</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sign-Post-Owner
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_65Dialog()">MBHPOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_63Dialog()">FWHTOwn</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+       </ul>
+     </li>
+     <li>
+      <button class="dropbtn">Reservoir</button>
+      <ul>
+        <li>
+          Sign-Post-Limit
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_29Dialog()">AcouLim</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_31Dialog()">SkinLim</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_33Dialog()">KHLim</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_34Dialog()">DepLim</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sign-Post-Flag
+          <ul>
+            <li>
+              
+            </li>
+            <li>
+            
+            </li>
+          </ul>
+        </li>
+        <li>
+          Current Flow Condition
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_30Dialog()">AcouCurr</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_16Dialog()">SKCurr</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_15Dialog()">KHCurr</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_35Dialog()">DepCurr</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+        <li>
+          Commentary
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_43Dialog()">AcouComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_53Dialog()">SkinComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_49Dialog()">KHComm</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_47Dialog()">DepComm</button>
+              </div>  
+      
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sign-Post-Owner
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_58Dialog()">AcouOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_72Dialog()">SkinOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_64Dialog()">KHOwn</button>
+              </div>  
+            </li>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_62Dialog()">DepOwn</button>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+     </li>
+     <li>
+      <button class="dropbtn">Team</button>
+      <ul>
+        <li>
+          Sign-Post-Limit
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_36Dialog()">RiskLim</button>
+              </div>    
+            </li>
+          </ul>
+        </li>
+        <li>
+          Current Flow Condition
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_37Dialog()">RiskCurr</button>
+              </div>    
+            </li>
+          </ul>
+        </li>
+        <li>
+          Commentary
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_52Dialog()">RiskComm</button>
+              </div> 
+          </ul>
+        </li>
+        <li>
+          Sign-Post-Owner
+          <ul>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="">
+              </mat-form-field>
+              <div>
+                <button class="btnClass" mat-raised-button (click)="open_71Dialog()">RiskOwn</button>
+              </div>  
+            </li>
+          </ul>
+        </li>
+      </ul>
+     </li>
+     <li>
+      <button class="dropbtn">Flow Conditions</button>
+      <ul>
+        <li>
+          <mat-form-field>
+            <input matInput [(ngModel)]="name" placeholder="">
+          </mat-form-field>
+          <button class="btnClass" mat-raised-button (click)="open_76Dialog()">QCurr</button>
+        </li>
+        <li>
+          <mat-form-field>
+            <input matInput [(ngModel)]="name" placeholder="">
+          </mat-form-field>
+          <button class="btnClass" mat-raised-button (click)="open_77Dialog()">QNext</button>
+        </li>
+      </ul>
+     </li>
     </ul>
-  </div>
-<!--------------------------------------->
+</div>
 <br>
 <div class="row">
-
   <!---->
   <div class="column4">
     <div class="dropdown">
-      <button class="dropbtn">Equipment</button>
-      <div class="dropdown-content">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder=".">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="openDialog()">PYpLim</button>
-          </div>
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder=".">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_38Dialog()">PypComm</button>
-          </div>
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_70Dialog()">PypOwn</button>
-          </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_2Dialog()">Pp</button>
-          </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_39Dialog()">PpComm</button>
-          </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_68Dialog()">PpOwn</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_3Dialog()">PT</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_40Dialog()">PtComm</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_69Dialog()">PtOwn</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_1Dialog()">PE</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_41Dialog()">PeComm</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_66Dialog()">PeOwn</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_4Dialog()">Ve</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_56Dialog()">VeComm</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_75Dialog()">VeOwn</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_7Dialog()">A-Ap</button>
-            </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-            <div>
-              <button class="btnClass" mat-raised-button (click)="open_42Dialog()">A-ApComm</button>
-            </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_57Dialog()">A-ApOwn</button>
-          </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_8Dialog()">B-Ap</button>
-          </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_44Dialog()">B-ApComm</button>
-          </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_59Dialog()">B-ApOwn</button>
-          </div>  
+      <div class="dropdown-content">      
        </div>
     </div>
   </div>
   <div class="column4">
-    <div class="dropdown">
-      <button class="dropbtn">Production</button>
-        <div class="dropdown-content">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_17Dialog()">DDLim</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_9Dialog()">DDCurr</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_18Dialog()">DDNext</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_45Dialog()">DDComm</button>
-        </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_60Dialog()">DDOwn</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_10Dialog()">DD1hrCurr</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_46Dialog()">DD1hrComm</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_20Dialog()">DD1hrNext</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_19Dialog()">DD1hrLim</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_61Dialog()">DD1hrOwn</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_11Dialog()">PI</button>
-        </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_22Dialog()">PILim</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_51Dialog()">PIComm</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_67Dialog()">PIOwn</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_12Dialog()">Vc</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_54Dialog()">VcComm</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field> 
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_73Dialog()">VcOwn</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_23Dialog()">VcLim</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_13Dialog()">VsCurr</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_24Dialog()">VsLim</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_55Dialog()">VsComm</button>
-      </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_74Dialog()">VsOwn</button>
-      </div> 
+    <div class="dropdown">  
+  </div>
+</div>
+<div class="column4">
+  <div class="dropdown">
+      <div class="dropdown-content">   
     </div>
   </div>
 </div>
 <div class="column4">
   <div class="dropdown">
-    <button class="dropbtn">Well Integrity</button>
-      <div class="dropdown-content">
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_25Dialog()">MBHPLim</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_26Dialog()">MBHPCurr</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_50Dialog()">MBHPComm</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_65Dialog()">MBHPOwn</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_27Dialog()">FWHTLim</button>
-          </div>  
-            <mat-form-field>
-              <input matInput [(ngModel)]="name" placeholder="">
-            </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_28Dialog()">FWHTCurr</button>
-          </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_48Dialog()">FWHTComm</button>
-        </div>  
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="">
-      </mat-form-field>
-      <div>
-        <button class="btnClass" mat-raised-button (click)="open_63Dialog()">FWHTOwn</button>
-      </div>  
-    </div>
-  </div>
-</div>
-<div class="column4">
-  <div class="dropdown">
-    <button class="dropbtn">Reservoir</button>
-      <div class="dropdown-content">
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_29Dialog()">AcouLim</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_30Dialog()">AcouCurr</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_43Dialog()">AcouComm</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_58Dialog()">AcouOwn</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_16Dialog()">SKCurr</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_31Dialog()">SkinLim</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_53Dialog()">SkinComm</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_72Dialog()">SkinOwn</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_15Dialog()">KHCurr</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_33Dialog()">KHLim</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_49Dialog()">KHComm</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_64Dialog()">KHOwn</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_34Dialog()">DepLim</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_35Dialog()">DepCurr</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_47Dialog()">DepComm</button>
-        </div>  
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <div>
-            <button class="btnClass" mat-raised-button (click)="open_62Dialog()">DepOwn</button>
-          </div>  
+      <div class="dropdown-content">  
         </div>
       </div>
     </div>
     <div class="column4">
       <div class="dropdown">
-        <button class="dropbtn">Team</button>
-          <div class="dropdown-content">
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_36Dialog()">RiskLim</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_37Dialog()">RiskCurr</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_52Dialog()">RiskComm</button>
-        </div>  
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder="">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_71Dialog()">RiskOwn</button>
-        </div>  
+          <div class="dropdown-content">  
       </div>
     </div>
   </div>
@@ -1288,7 +1533,7 @@
 </div>
 </div>
 </div-->
-<br>
+<br><br><br>
   <div class='row'>
     <table>
       <thead>
@@ -1369,25 +1614,6 @@
         <th class="tb-head1">{{this.sharedService.storeFlowNextValue}}</th>
         <th></th>
         <th></th>
-      <tr>
-        <th colspan="4"></th>
-        <th class=signLimit></th>
-        <th class=signFlag></th>
-        <th class="tb-head1">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <button class="btnClass" mat-raised-button (click)="open_76Dialog()">QCurr</button>
-        </th>
-        <th class="tb-head1">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-          <button class="btnClass" mat-raised-button (click)="open_77Dialog()">QNext</button>
-        </th>
-        <th></th>
-        <th></th>
-      </tr>
       <tr>
         <td class="tb-head3">Equipment</td>
         <td>Yield Strength Collapse</td>

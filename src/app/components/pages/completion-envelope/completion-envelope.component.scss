@@ -131,6 +131,7 @@
   
     .calculator {
       border: 1px solid #ccc;
+      background-color: #4d0909;
       border-radius: 5px;
       position: relative;
       top: 50%;
@@ -151,7 +152,7 @@
       padding-left: 5px;
     }
     
-    button {
+    .calButton {
       height: 40px;
       background-color: #fff;
       border-radius: 3px;
@@ -173,7 +174,7 @@
     }
     
     .all-clear {
-      background-color: #f0595f;
+      background-color: #ecbe23;
       border-color: #b0353a;
       color: #fff;
     }
@@ -183,8 +184,8 @@
     }
     
     .equal-sign {
-      background-color: #2e86c0;
-      border-color: #337cac;
+      background-color: #3fc02e;
+      border-color: #39e018;
       color: #fff;
       height: 100%;
       grid-area: 2 / 4 / 6 / 5;
@@ -212,7 +213,7 @@
       background-color: indigo;
     } 
   
-    button[_ngcontent-kev-c6] {
+    .matbutton[_ngcontent-kev-c6] {
       height: 10px;
       background-color: #fff;
       border-radius: 3px;

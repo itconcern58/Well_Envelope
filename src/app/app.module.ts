@@ -110,6 +110,20 @@ import { ModalVsOwnComponent } from './components/pages/modal-vs-own/modal-vs-ow
 import { ModalVeOwnComponent } from './components/pages/modal-ve-own/modal-ve-own.component';
 import { ModalFlowCurrComponent } from './components/pages/modal-flow-curr/modal-flow-curr.component';
 import { ModalFlowNextComponent } from './components/pages/modal-flow-next/modal-flow-next.component';
+import { ModalPypFlagComponent } from './components/pages/modal-pyp-flag/modal-pyp-flag.component';
+import { ModalBapFlagComponent } from './components/pages/modal-b-ap-flag/modal-b-ap-flag.component';
+import { ModalAApFlagComponent } from './components/pages/modal-a-ap-flag/modal-a-ap-flag.component';
+import { ModalDdFlagComponent } from './components/pages/modal-dd-flag/modal-dd-flag.component';
+import { ModalDd1hrFlagComponent } from './components/pages/modal-dd1hr-flag/modal-dd1hr-flag.component';
+import { ModalDepFlagComponent } from './components/pages/modal-dep-flag/modal-dep-flag.component';
+import { ModalFwhtFlagComponent } from './components/pages/modal-fwht-flag/modal-fwht-flag.component';
+import { ModalMbhpFlagComponent } from './components/pages/modal-mbhp-flag/modal-mbhp-flag.component';
+import { ModalPeFlagComponent } from './components/pages/modal-pe-flag/modal-pe-flag.component';
+import { ModalPpFlagComponent } from './components/pages/modal-pp-flag/modal-pp-flag.component';
+import { ModalPtFlagComponent } from './components/pages/modal-pt-flag/modal-pt-flag.component';
+import { ModalVeFlagComponent } from './components/pages/modal-ve-flag/modal-ve-flag.component';
+import { ModalVcFlagComponent } from './components/pages/modal-vc-flag/modal-vc-flag.component';
+import { ModalVsFlagComponent } from './components/pages/modal-vs-flag/modal-vs-flag.component';
 
 @NgModule({
   
@@ -198,6 +212,20 @@ import { ModalFlowNextComponent } from './components/pages/modal-flow-next/modal
     ModalVeOwnComponent,
     ModalFlowCurrComponent,
     ModalFlowNextComponent,
+    ModalPypFlagComponent,
+    ModalBapFlagComponent,
+    ModalAApFlagComponent,
+    ModalDdFlagComponent,
+    ModalDd1hrFlagComponent,
+    ModalDepFlagComponent,
+    ModalFwhtFlagComponent,
+    ModalMbhpFlagComponent,
+    ModalPeFlagComponent,
+    ModalPpFlagComponent,
+    ModalPtFlagComponent,
+    ModalVeFlagComponent,
+    ModalVcFlagComponent,
+    ModalVsFlagComponent,
   ],
   imports: [
     BrowserModule,
@@ -237,7 +265,9 @@ import { ModalFlowNextComponent } from './components/pages/modal-flow-next/modal
   ModalAApOwnComponent, ModalAcouOwnComponent, ModalBApOwnComponent, ModalDdOwnComponent, ModalDd1hrOwnComponent, ModalDepOwnComponent, 
   ModalFwhtOwnComponent, ModalKhOwnComponent, ModalMbhpOwnComponent, ModalPeOwnComponent, ModalPiOwnComponent, ModalPpOwnComponent, ModalPtOwnComponent,
   ModalPypOwnComponent, ModalRiskOwnComponent, ModalSkinOwnComponent, ModalVcOwnComponent, ModalVsOwnComponent, ModalVeOwnComponent, ModalFlowCurrComponent,
-  ModalFlowNextComponent  ]
+  ModalFlowNextComponent, ModalPypFlagComponent, ModalBapFlagComponent, ModalAApFlagComponent, ModalDdFlagComponent, ModalDd1hrFlagComponent,
+  ModalDepFlagComponent, ModalFwhtFlagComponent, ModalMbhpFlagComponent, ModalPeFlagComponent,ModalPpFlagComponent, ModalPtFlagComponent,
+  ModalVeFlagComponent, ModalVcFlagComponent, ModalVsFlagComponent]
 })
 
 export class AppModule { }

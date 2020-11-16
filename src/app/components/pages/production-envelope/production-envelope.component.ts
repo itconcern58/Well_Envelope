@@ -480,12 +480,12 @@ open_11Dialog(): void {
   
   deltaTimeData = this.timeData.map((n,i) => n -this.initialTime[i]);
   derivativeTime = this.timeData.map((n, i) => n/this.deltaTimeData[i]);
-  logDerivativeTime = this.derivativeTime.map((n,i) =>Math.log(this.derivativeTime[i]));
+  logDerivativeTime = this.derivativeTime.map((n,i) =>Math.log(+this.derivativeTime[i]).toFixed(2));
   logDerivativeTime_1 = this.logDerivativeTime.shift();
   deltaLogDerivativeTime = this.logDerivativeTime.slice(1);
   
   /* (x-x1) in the regression equation-----*/
-  DeltaX = (this.logDerivativeTime.map((n, i) => n/this.deltaLogDerivativeTime[i]));
+  DeltaX = (this.logDerivativeTime.map((n, i) => (+n/+this.deltaLogDerivativeTime[i])));
   popped = this.DeltaX.pop()
 
    /* (y-y1) in the regression equation-----*/
@@ -511,13 +511,13 @@ open_11Dialog(): void {
   logDerivativeTimeForLine = [this.logDerivativeTime[this.filteredSlopeYX.length], this.logDerivativeTime[this.filteredSlopeYX.length+6]];
 
   pressDataWorkSpace = this.pressData[this.pressData.length-2] - this.pressData[this.pressData.length-6];
-  timeDataWorkSpace = this.logDerivativeTime[this.logDerivativeTime.length-6] - this.logDerivativeTime[this.logDerivativeTime.length-1];
+  timeDataWorkSpace = +this.logDerivativeTime[this.logDerivativeTime.length-6] - +this.logDerivativeTime[this.logDerivativeTime.length-1];
 
 
   SlopeWorkSpace = this.pressDataWorkSpace/this.timeDataWorkSpace;
-  Intercept = this.pressData[this.pressData.length-6]-this.logDerivativeTime[this.logDerivativeTime.length-6]*this.SlopeWorkSpace
+  Intercept = this.pressData[this.pressData.length-6]-+this.logDerivativeTime[this.logDerivativeTime.length-6]*this.SlopeWorkSpace
 
-  PressDataForLineWorkSpace = this.logDerivativeTime.map((n,i)=> n*this.SlopeWorkSpace + this.Intercept);
+  PressDataForLineWorkSpace = this.logDerivativeTime.map((n,i)=> +n*this.SlopeWorkSpace + this.Intercept);
 
   dataWork = this.PressDataForLineWorkSpace.sort();
   newArray = [[this.logDerivativeTime[0], this.dataWork[0]], [this.logDerivativeTime[this.logDerivativeTime.length-1], this.dataWork[this.logDerivativeTime.length-1]]];
@@ -545,10 +545,15 @@ open_11Dialog(): void {
      title: {
         text: "Horner Plot"
      },
-     xAxis:[{
+     xAxis:[   {
+       title: {
+       text:"Log of time derivative"
+      },
+    },
+      {
         gridLineWidth: 0,
         categories:this.logDerivativeTime,
-        crosshair:true
+        crosshair:true,
      },
      {
         gridLineWidth: 1,
@@ -562,12 +567,12 @@ open_11Dialog(): void {
         } 
      },
      series: [{
-        name: "Pressure full",
+        name: "Raw Pressure Data",
         data:[4675, 4705, 4733, 4750, 4757, 4761, 4763, 4766, 4770, 4773, 4775, 4777],
         type: "line"
      },
      {
-        name: "Pressure Short",
+        name: "Pressure Calculated from Straight Line",
         data: this.PressDataForLineWorkSpace,
         type: "line"
      }

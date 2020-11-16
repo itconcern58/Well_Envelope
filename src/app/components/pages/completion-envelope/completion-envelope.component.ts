@@ -89,6 +89,20 @@ import { ModalVeOwnComponent } from './../modal-ve-own/modal-ve-own.component';
 import { ModalPiLimComponent } from './../modal-pi-lim/modal-pi-lim.component';
 import { ModalFlowCurrComponent } from './../modal-flow-curr/modal-flow-curr.component';
 import { ModalFlowNextComponent } from './../modal-flow-next/modal-flow-next.component';
+import { ModalPypFlagComponent } from './../modal-pyp-flag/modal-pyp-flag.component';
+import { ModalBapFlagComponent } from '../modal-b-ap-flag/modal-b-ap-flag.component';
+import { ModalAApFlagComponent } from '../modal-a-ap-flag/modal-a-ap-flag.component';
+import { ModalDdFlagComponent } from '../modal-dd-flag/modal-dd-flag.component';
+import { ModalDd1hrFlagComponent } from '../modal-dd1hr-flag/modal-dd1hr-flag.component';
+import { ModalDepFlagComponent } from '../modal-dep-flag/modal-dep-flag.component';
+import { ModalFwhtFlagComponent } from '../modal-fwht-flag/modal-fwht-flag.component';
+import { ModalMbhpFlagComponent } from '../modal-mbhp-flag/modal-mbhp-flag.component';
+import { ModalPeFlagComponent } from '../modal-pe-flag/modal-pe-flag.component';
+import { ModalPpFlagComponent } from '../modal-pp-flag/modal-pp-flag.component';
+import { ModalPtFlagComponent } from '../modal-pt-flag/modal-pt-flag.component';
+import { ModalVeFlagComponent } from '../modal-ve-flag/modal-ve-flag.component';
+import { ModalVcFlagComponent } from '../modal-vc-flag/modal-vc-flag.component';
+import { ModalVsFlagComponent } from '../modal-vs-flag/modal-vs-flag.component';
 
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
@@ -238,6 +252,36 @@ export class CompletionEnvelopeComponent implements OnInit {
   resultFlowCurrValueFromService: number;
   resultFlowNextValue :number;
   resultFlowNextValueFromService: number;
+  resultPypFlagValue: number;
+  resultPypFlagValueFromService: number;
+  resultAcouFlagValue: number;
+  resultAcouFlagValueFromService: number;
+  resultBapFlagValue: number;
+  resultBapFlagValueFromService: number;
+  resultAapFlagValue: number;
+  resultAapFlagValueFromService: number;
+  resultDDFlagValue: number;
+  resultDDFlagValueFromService: number;
+  resultDD1hrFlagValue: number;
+  resultDD1hrFlagValueFromService: number;
+  resultDepFlagValue: number;
+  resultDepFlagValueFromService: number;
+  resultFwhtFlagValue: number;
+  resultFwhtFlagValueFromService: number;
+  resultMbhpFlagValue: number;
+  resultMbhpFlagValueFromService: number;
+  resultPeFlagValue: number;
+  resultPeFlagValueFromService: number;
+  resultPpFlagValue: number;
+  resultPpFlagValueFromService: number;
+  resultPtFlagValue: number;
+  resultPtFlagValueFromService: number;
+  resultVeFlagValue: number;
+  resultVeFlagValueFromService: number;
+  resultVcFlagValue: number;
+  resultVcFlagValueFromService: number;
+  resultVsFlagValue: number;
+  resultVsFlagValueFromService: number;
 
  // Modal ts file
  constructor(public dialog: MatDialog,
@@ -293,29 +337,28 @@ export class CompletionEnvelopeComponent implements OnInit {
      });
    }
  
-       /*---------------------------------------*/
-       open_4Dialog(): void {
-         const dialogRef = this.dialog.open(ModalVEComponent, {
-           width: '250px',
-           data: { name: this.name, color: this.color }
-         });
-     
-         dialogRef.afterClosed().subscribe(res => {
-           this.color = res;
-         });
-       }
-          /*---------------------------------------*/
-          open_5Dialog(): void {
-           const dialogRef = this.dialog.open(ModalPbComponent, {
-             width: '250px',
-             data: { name: this.name, color: this.color }
-           });
-       
-           dialogRef.afterClosed().subscribe(res => {
-             this.color = res;
-           });
-         }
+  /*---------------------------------------*/
+  open_4Dialog(): void {
+    const dialogRef = this.dialog.open(ModalVEComponent, {
+      width: '250px',
+      data: { name: this.name, color: this.color }
+    });
 
+    dialogRef.afterClosed().subscribe(res => {
+      this.color = res;
+    });
+  }
+  /*---------------------------------------*/
+  open_5Dialog(): void {
+    const dialogRef = this.dialog.open(ModalPbComponent, {
+      width: '250px',
+      data: { name: this.name, color: this.color }
+    });
+
+    dialogRef.afterClosed().subscribe(res => {
+      this.color = res;
+    });
+  }
  /*---------------------------------------*/
  open_6Dialog(): void {
    const dialogRef = this.dialog.open(ModalHPComponent, {
@@ -327,7 +370,6 @@ export class CompletionEnvelopeComponent implements OnInit {
      this.color = res;
    });
  }
-
   /*---------------------------------------*/
   open_7Dialog(): void {
    const dialogRef = this.dialog.open(ModalAAPComponent, {
@@ -1116,6 +1158,169 @@ open_77Dialog(): void {
   });
 }
 
+/*--------------------------------------*/
+open_78Dialog(): void {
+  const dialogRef = this.dialog.open(ModalPypFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_79Dialog(): void {
+  const dialogRef = this.dialog.open(ModalBapFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+/*--------------------------------------*/
+open_80Dialog(): void {
+  const dialogRef = this.dialog.open(ModalAApFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_81Dialog(): void {
+  const dialogRef = this.dialog.open(ModalDdFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+/*--------------------------------------*/
+open_82Dialog(): void {
+  const dialogRef = this.dialog.open(ModalDd1hrFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+/*--------------------------------------*/
+open_83Dialog(): void {
+  const dialogRef = this.dialog.open(ModalDepFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+/*--------------------------------------*/
+open_84Dialog(): void {
+  const dialogRef = this.dialog.open(ModalFwhtFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_85Dialog(): void {
+  const dialogRef = this.dialog.open(ModalMbhpFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_86Dialog(): void {
+  const dialogRef = this.dialog.open(ModalPeFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_87Dialog(): void {
+  const dialogRef = this.dialog.open(ModalPpFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_88Dialog(): void {
+  const dialogRef = this.dialog.open(ModalPtFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_89Dialog(): void {
+  const dialogRef = this.dialog.open(ModalVeFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_90Dialog(): void {
+  const dialogRef = this.dialog.open(ModalVcFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
+
+/*--------------------------------------*/
+open_91Dialog(): void {
+  const dialogRef = this.dialog.open(ModalVsFlagComponent, {
+    width: '250px',
+    data: { name: this.name, color: this.color }
+  });
+
+  dialogRef.afterClosed().subscribe(res => {
+    this.color = res;
+  });
+}
 //____________________________________________________________________//
 
 Wells = [
@@ -1391,6 +1596,62 @@ Wells = [
     this.resultFlowNextValue = window.history.state.resultFlowNext;
     // or
     this.resultFlowNextValueFromService = this.sharedService.storeFlowNextValue;
+
+    this.resultPypFlagValue = window.history.state.resultPypFlagValue;
+    // or
+    this.resultPypFlagValueFromService = this.sharedService.storePypFlagValue;
+
+    this.resultBapFlagValue = window.history.state.resultBapFlagValue;
+    // or
+    this.resultBapFlagValueFromService = this.sharedService.storeBapFlagValue;
+
+    this.resultAapFlagValue = window.history.state.resultAapFlagValue;
+    // or
+    this.resultAapFlagValueFromService = this.sharedService.storeAApFlagValue;
+
+    this.resultDDFlagValue = window.history.state.resultDDFlagValue;
+    // or
+    this.resultDDFlagValueFromService = this.sharedService.storeDDFlagValue;
+
+    this.resultDD1hrFlagValue = window.history.state.resultDD1hrFlagValue;
+    // or
+    this.resultDD1hrFlagValueFromService = this.sharedService.storeDD1hrFlagValue;
+
+    this.resultDepFlagValue = window.history.state.resultDepFlagValue;
+    // or
+    this.resultDepFlagValueFromService = this.sharedService.storeDepFlagValue;
+
+    this.resultFwhtFlagValue = window.history.state.resultFwhtFlagValue;
+    // or
+    this.resultFwhtFlagValueFromService = this.sharedService.storeFwhtFlagValue;
+
+    this.resultMbhpFlagValue = window.history.state.resultMbhpFlagValue;
+    // or
+    this.resultMbhpFlagValueFromService = this.sharedService.storeMbhpFlagValue;
+
+    this.resultPeFlagValue = window.history.state.resultPeFlagValue;
+    // or
+    this.resultPeFlagValueFromService = this.sharedService.storePeFlagValue;
+
+    this.resultPpFlagValue = window.history.state.resultPpFlagValue;
+    // or
+    this.resultPpFlagValueFromService = this.sharedService.storePpFlagValue;
+
+    this.resultPtFlagValue = window.history.state.resultPtFlagValue;
+    // or
+    this.resultPtFlagValueFromService = this.sharedService.storePtFlagValue;
+
+    this.resultVeFlagValue = window.history.state.resultVeFlagValue;
+    // or
+    this.resultVeFlagValueFromService = this.sharedService.storeVeFlagValue;
+
+    this.resultVcFlagValue = window.history.state.resultVcFlagValue;
+    // or
+    this.resultVcFlagValueFromService = this.sharedService.storeVcFlagValue;
+
+    this.resultVsFlagValue = window.history.state.resultVsFlagValue;
+    // or
+    this.resultVsFlagValueFromService = this.sharedService.storeVsFlagValue;
   }
 
 }

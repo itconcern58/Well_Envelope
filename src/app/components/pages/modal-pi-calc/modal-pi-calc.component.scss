@@ -1,5 +1,5 @@
 .column {
-    position: absolute;
+    position: fixed;
     background-color: gainsboro;
     border:2px solid  gainsboro;
     border-radius: 5px;
@@ -17,12 +17,8 @@
 }
 
 label {
-    padding: 10px;
-    display: inline-block;
-  width: 40px;
-  text-align: right;
+    padding: 20px;
 }
-
 input[type=text] {
     background-color: #ddc3f8;
     color: black;  
@@ -56,12 +52,3 @@ input[type=text] {
 h2 {
     margin: 10px;
 }
-
-.modal {
-    padding: 10px;
-    cursor: move;
-    z-index: 10;
-    
-   // background-color: #2196F3;
-   // color: #fff;
-  }

@@ -124,6 +124,10 @@ import { ModalPtFlagComponent } from './components/pages/modal-pt-flag/modal-pt-
 import { ModalVeFlagComponent } from './components/pages/modal-ve-flag/modal-ve-flag.component';
 import { ModalVcFlagComponent } from './components/pages/modal-vc-flag/modal-vc-flag.component';
 import { ModalVsFlagComponent } from './components/pages/modal-vs-flag/modal-vs-flag.component';
+import { ModalDDthrCalcComponent } from './components/pages/modal-ddthr-calc/modal-ddthr-calc.component';
+import { ModalPICalcComponent } from './components/pages/modal-pi-calc/modal-pi-calc.component';
+import { ModalKHCalcComponent } from './components/pages/modal-kh-calc/modal-kh-calc.component';
+import { ModalSKCalcComponent } from './components/pages/modal-sk-calc/modal-sk-calc.component';
 
 @NgModule({
   
@@ -226,6 +230,10 @@ import { ModalVsFlagComponent } from './components/pages/modal-vs-flag/modal-vs-
     ModalVeFlagComponent,
     ModalVcFlagComponent,
     ModalVsFlagComponent,
+    ModalDDthrCalcComponent,
+    ModalPICalcComponent,
+    ModalKHCalcComponent,
+    ModalSKCalcComponent,
   ],
   imports: [
     BrowserModule,
@@ -267,7 +275,8 @@ import { ModalVsFlagComponent } from './components/pages/modal-vs-flag/modal-vs-
   ModalPypOwnComponent, ModalRiskOwnComponent, ModalSkinOwnComponent, ModalVcOwnComponent, ModalVsOwnComponent, ModalVeOwnComponent, ModalFlowCurrComponent,
   ModalFlowNextComponent, ModalPypFlagComponent, ModalBapFlagComponent, ModalAApFlagComponent, ModalDdFlagComponent, ModalDd1hrFlagComponent,
   ModalDepFlagComponent, ModalFwhtFlagComponent, ModalMbhpFlagComponent, ModalPeFlagComponent,ModalPpFlagComponent, ModalPtFlagComponent,
-  ModalVeFlagComponent, ModalVcFlagComponent, ModalVsFlagComponent]
+  ModalVeFlagComponent, ModalVcFlagComponent, ModalVsFlagComponent, ModalDDthrCalcComponent, ModalPICalcComponent,
+ModalKHCalcComponent, ModalSKCalcComponent]
 })
 
 export class AppModule { }

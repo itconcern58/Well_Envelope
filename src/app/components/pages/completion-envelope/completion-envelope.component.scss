@@ -57,15 +57,30 @@
      // -moz-column-width: 20%;
    //       column-width: 20%;
   } 
-  .columnB {
+  .column8 {
     float: left;
-    width: 6.33%;
+    width: 80%;
     //padding: 1px;
-   margin-right:10.0px;
+   margin:5.0px;
    // height: 40px !important; /* Should be removed. Only for demonstration */
-    //border:1px solid;
+    border:1px solid;
     background-color: #dce1e4;
     border-color: grey;
+    //  -webkit-column-width: 20%;
+     // -moz-column-width: 20%;
+   //       column-width: 20%;
+  } 
+
+  .column9 {
+    float: left;
+    width: 17%;
+    //padding: 1px;
+    margin:5.0px;
+   // height: 40px !important; /* Should be removed. Only for demonstration */
+    border:1px solid;
+    background-color: #dce1e4;
+    border-color: blue;
+    border-radius: 10px;
     //  -webkit-column-width: 20%;
      // -moz-column-width: 20%;
    //       column-width: 20%;
@@ -239,10 +254,12 @@
   .btnClass {
     height: 30px !important;
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 1px solid #c4c4c4;
     font-size: 12px !important;
     width:100px !important;
+    position:relative;
+    left: -200px;
   }
 
   .btnClass1 {
@@ -326,11 +343,11 @@
 
 table{
 border-collapse:collapse;
-border:0.5px solid #141414;
+//border:0.5px solid #141414;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-size: 13px;
-width:95%;
-margin: 3%;
+width:100%;
+margin: 0;
 }
 
 table th{
@@ -345,7 +362,7 @@ table th{
   
 table tr{
   //border:1px solid #0f0f0f;
-  height: 20px;
+  height: 15px;
     }
 
 table td{
@@ -376,11 +393,11 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: rgb(159, 205, 50) !important;
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 17px;
+  font-size: 14px;
   border:1px solid grey
 }
 .tb-head2 {
-  font-size: 17px;
+  font-size: 12px;
 }
 .tb-head3 {
  background-color:  rgb(116, 207, 250);
@@ -412,10 +429,37 @@ ul#menu li {
 .dropbtn {
   background-color: #0a087c;
   color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: solid 1px;
-  border-radius: 15px;
+  font-size: 12px;
+  position:relative;
+  top:80px;
+  width:100px; 
+  padding:5px; 
+  border:1px solid #dce1e4; 
+  border-radius: 10px;
+}
+
+.dropbtn1 {
+  background-color: #0a087c;
+  color: white;
+  font-size: 12px;
+  position:relative;
+  top:50px;
+  width:100px; 
+  padding:5px; 
+  border:1px solid #dce1e4; 
+  border-radius: 10px;
+}
+
+.dropbtn2 {
+  background-color: #0a087c;
+  color: white;
+  font-size: 12px;
+  position:relative;
+  top:50px;
+  width:100px; 
+  padding:5px; 
+  border:1px solid #dce1e4; 
+  border-radius: 10px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -489,13 +533,13 @@ ul#menu li {
   --menu-height: 40px;
   // holder and ul general style
   box-sizing: border-box;
-  position: fixed;
-  top: 50;
+  position: relative;
+  top: 40;
   left: 0;
-  width: 100vw;
+  width: 10vw;
   ul {
     list-style: none;
-    padding: 16px;
+    padding: 0px;
     margin: 0;
     li, li a {
       opacity: .8;
@@ -522,10 +566,10 @@ ul#menu li {
       &::before {
         content: '';
         width: 0; 
-        height: 0; 
+        height: 0px; 
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 5px solid #FFA500;
+        border-top: 5px solid #dce1e4;
         position: absolute;
         right: 8px;
         top: 50%;
@@ -547,34 +591,34 @@ ul#menu li {
     display: flex;
     height: var(--menu-height);
     align-items: center;
-    background-color: #000000;
+    background-color:#dce1e4;
     // the first ul elements can be a
     // link or an li with a nested ul. 
     // the nested ul will be a dropdown
     li {
       position: relative;
-      margin: 0 8px;
+      margin: 0px 8px;
       // the dropdown style
       ul {
         visibility: hidden;
         opacity: 0;        
-        padding: 0;
-        min-width: 160px;
+        padding: 5px;
+        max-width: 140px;
         background-color: #333;
-        position: absolute;
+        position: relative;
         top: calc(var(--menu-height) + 5px);
-        left: 50%;
+        left: 130%;
         transform: translateX(-50%);
         transition: 200ms;
         transition-delay: 200ms;
         // the dropdown items style
         li {
-          margin: 0;
+          margin: 0px;
           padding: 8px 16px;
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          height: 30px;
+          height: 20px;
           padding-right: 40px;
           // lets put an arrow right
           // to the inner li`s with

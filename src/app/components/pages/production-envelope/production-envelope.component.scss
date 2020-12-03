@@ -89,7 +89,7 @@
 
   .calculator {
     border: 1px solid #ccc;
-    background-color: brown;
+    background-color:  #0a087c;
     border-radius: 15px;
     position: relative;
     top: 50%;
@@ -143,9 +143,9 @@
   }
   
   .equal-sign {
-    background-color: #0d2525;
+    background-color: #fff;
     border-color: #1f2122;
-    color: #fff;
+    color: #0d2525;
     height: 100%;
     grid-area: 2 / 4 / 6 / 5;
   }
@@ -196,12 +196,14 @@
 }
 
 .btnClass {
-  height: 50px !important;
+  height: 35px !important;
   background-color: rgb(61, 15, 15);
   border-radius: 15px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #c4c4c4;
-  font-size: 15px !important;
+  font-size: 12px !important;
+  position:relative;
+  left: -150%
 }
 .btnTxt {
   font-size: 10px !important;
@@ -216,7 +218,7 @@
 .wrapper{margin:25px auto;max-width:600px;text-align:center;padding:0 20px;}
 .container{width:45%;margin:0 25px 25px 0;display:inline-block;vertical-align:top;}
 .movie-list{width:80%;border:solid 1px #ccc;min-height:60px;display:inline-block;background:rgb(209, 186, 136);border-radius:4px;overflow:hidden;margin-top:25px;}
-.movie-block{padding:20px 10px;border-bottom:solid 1px rgb(241, 235, 235);color:rgb(247, 240, 240);display:flex;flex-direction:row;align-items:center;justify-content:space-between;box-sizing:border-box;cursor:move;background:brown;font-size:12px;font-family: Verdana, Geneva, Tahoma, sans-serif; }
+.movie-block{padding:20px 10px;border-bottom:solid 1px rgb(241, 235, 235);color:rgb(247, 240, 240);display:flex;flex-direction:row;align-items:center;justify-content:space-between;box-sizing:border-box;cursor:move;background:#0a087c;font-size:12px;font-family: Verdana, Geneva, Tahoma, sans-serif; }
 .cdk-drag-preview{box-sizing:border-box;border-radius:4px;box-shadow:0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);}
 .cdk-drag-placeholder{opacity:0;}
 .cdk-drag-animating{transition:transform 250ms cubic-bezier(0, 0, 0.2, 1);}
@@ -262,4 +264,212 @@
   //  -webkit-column-width: 20%;
    // -moz-column-width: 20%;
  //       column-width: 20%;
+}
+
+.column8 {
+  float: left;
+  width: 40%;
+  //padding: 1px;
+  margin:5.0px;
+  height: 400px !important; /* Should be removed. Only for demonstration */
+  border:1px solid;
+  background-color: #dce1e4;
+  border-color: grey;
+  //  -webkit-column-width: 20%;
+   // -moz-column-width: 20%;
+ //       column-width: 20%;
 } 
+
+.column9 {
+  float: left;
+  width: 25%;
+  //padding: 1px;
+  margin:5.0px;
+  //height: 400px !important; /* Should be removed. Only for demonstration */
+  border:1px solid;
+  background-color: #dce1e4;
+  border-color: blue;
+  border-radius: 10px;
+  //  -webkit-column-width: 20%;
+   // -moz-column-width: 20%;
+ //       column-width: 20%;
+} 
+
+.column10 {
+  float: left;
+  width: 25%;
+  //padding: 1px;
+  margin:5.0px;
+  height: 400px !important; /* Should be removed. Only for demonstration */
+  border:1px solid;
+  background-color: #dce1e4;
+  border-color: blue;
+  border-radius: 10px;
+  //  -webkit-column-width: 20%;
+   // -moz-column-width: 20%;
+ //       column-width: 20%;
+} 
+
+.dropbtn {
+  background-color: #0a087c;
+  color: white;
+  font-size: 12px;
+  position:relative;
+  top:80px;
+  width:150px; 
+  padding:5px; 
+  border:1px solid #dce1e4; 
+  border-radius: 10px;
+}
+
+.dropbtn1 {
+  background-color: #0a087c;
+  color: white;
+  font-size: 12px;
+  position:relative;
+  top:50px;
+  width:150px; 
+  padding:5px; 
+  border:1px solid #dce1e4; 
+  border-radius: 10px;
+}
+
+.dropbtn2 {
+  background-color: #0a087c;
+  color: white;
+  font-size: 12px;
+  position:relative;
+  top:50px;
+  width:150px; 
+  padding:5px; 
+  border:1px solid #dce1e4; 
+  border-radius: 10px;
+}
+
+.menu {
+  // define the height of the menu
+  --menu-height: 40px;
+  // holder and ul general style
+  box-sizing: border-box;
+  position: relative;
+  top: 50;
+  left: 0;
+  width: 10vw;
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    li, li a {
+      opacity: .8;
+      color: #ffffff;      
+      cursor: pointer;
+      transition: 200ms;
+      text-decoration: none;
+      white-space: nowrap;
+      font-weight: 700;
+      &:hover {
+        opacity: 1;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;      
+      }      
+    }
+    // lets put an arrow down 
+    // to the li`s with dropdown
+    li {
+      padding-right: 36px;
+      &::before {
+        content: '';
+        width: 0; 
+        height: 0px; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #dce1e4;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .link {
+      // links dont need arrow
+      &::before {
+        padding-right: 0;
+        display: none;
+      }      
+    }
+  }
+  // the first ul inside the container
+  // is the menu, so must be visible 
+  // and have its own style
+  > ul {
+    display: flex;
+    height: var(--menu-height);
+    align-items: center;
+    background-color:#dce1e4;
+    // the first ul elements can be a
+    // link or an li with a nested ul. 
+    // the nested ul will be a dropdown
+    li {
+      position: relative;
+      margin: 0px 8px;
+      // the dropdown style
+      ul {
+        visibility: hidden;
+        opacity: 0;        
+        padding: 5px;
+        max-width: 140px;
+        background-color: #333;
+        position: relative;
+        top: calc(var(--menu-height) + 5px);
+        left: 140%;
+        transform: translateX(-50%);
+        transition: 200ms;
+        transition-delay: 200ms;
+        // the dropdown items style
+        li {
+          margin: 0px;
+          padding: 8px 16px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 30px;
+          padding-right: 40px;
+          // lets put an arrow right
+          // to the inner li`s with
+          // dropdowns
+          &::before {
+            width: 0; 
+            height: 0; 
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid #FFA500;
+          }
+          // every dropdown after the
+          // first must open to the right
+          ul {
+            top: -2%;
+            left: 100%;
+            transform: translate(0)
+          }
+          &:hover {
+            background-color: #000000;
+          }
+        }
+      }
+      // on hover an li (not an <a>)
+      // must show its ul (dropdown)
+      &:hover {
+        > ul {
+          opacity: 1;
+          visibility: visible;
+          transition-delay: 0ms;
+        }
+      }
+    }
+  }
+}
+//**----------------------------------------------------------/

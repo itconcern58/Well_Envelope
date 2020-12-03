@@ -1,5 +1,105 @@
+<br>
 <div class="row">
-  <div class="column">
+  <div class="column10">
+    <table>
+      <tbody>
+        <tr>
+          <div class="menu">
+            <ul>
+              <li>
+                <div class="dropbtn1">Casing Info</div>
+                 <ul>
+                  <li>
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="name" placeholder="">
+                    </mat-form-field>
+                    <button class="btnClass" mat-raised-button (click)="open_5Dialog()">Pb</button>
+                  </li>
+                  <li>
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="name" placeholder="">
+                    </mat-form-field>
+                      <button class="btnClass" mat-raised-button (click)="open_6Dialog()">HP</button>
+                  </li>
+                </ul>   
+              </li>
+            </ul>
+          </div>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <div class="menu">
+            <ul>
+              <li>
+                <div class="dropbtn">Production Info</div>
+                 <ul>
+                  <li>
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="name" placeholder="">
+                    </mat-form-field>
+                    <button class="btnClass" mat-raised-button (click)="open_14Dialog()">Pr</button>
+                  </li>
+                  <li>
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="name" placeholder="">
+                    </mat-form-field>
+                      <button class="btnClass" mat-raised-button (click)="open_100Dialog()">DDthr</button>
+                  </li>
+                  <li>
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="name" placeholder="">
+                    </mat-form-field>
+                      <button class="btnClass" mat-raised-button (click)="open_101Dialog()">PI</button>
+                  </li>
+                </ul>   
+              </li>
+            </ul>
+          </div>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <div class="menu">
+            <ul>
+              <li>
+                <div class="dropbtn">Reservoir Info</div>
+                 <ul>
+                  <li>
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="name" placeholder="">
+                    </mat-form-field>
+                    <button class="btnClass" mat-raised-button (click)="open_102Dialog()">KH</button>
+                  </li>
+                  <li>
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="name" placeholder="">
+                    </mat-form-field>
+                      <button class="btnClass" mat-raised-button (click)="open_103Dialog()">SK</button>
+                  </li>
+                </ul>   
+              </li>
+            </ul>
+          </div>
+        </tr>
+      </tbody> 
+    </table>
+  </div>
+  <div class="column8">
     <div class="wrapper">
       <mat-tab-group>
         <!--mat-tab label="Reordering lists">
@@ -28,246 +128,44 @@
         </div>
         </mat-tab>
       </mat-tab-group>
-    </div>
-</div>
+    </div>  
+  </div>
+  <h4 *ngIf="color">
+    You selected: <p style="font-weight: bold">{{color}}</p>
+  </h4>
+<div class="column9" id="outer">
+  <div class="calculator"id="inner">
+    <input type="text" class="calculator-screen" [value]="currentNumber" disabled />   
+    <div class="calculator-keys">
+
+      <button class="calculatorbutton" type="button" (click) = "getOperation('+')" class="operator" value="+">+</button>
+      <button class="calculatorbutton" type="button" (click) = "getOperation('-')" class="operator" value="-">-</button>
+      <button class="calculatorbutton" type="button" (click) = "getOperation('*')" class="operator" value="*">&times;</button>
+      <button class="calculatorbutton" type="button" (click) = "getOperation('/')" class="operator" value="/">&divide;</button>
+          
+      <button class="calculatorbutton" type="button" (click) = "getNumber('7')" value="7">7</button>
+      <button class="calculatorbutton" type="button" (click) = "getNumber('8')" value="8">8</button>
+      <button class="calculatorbutton" type="button" (click) = "getNumber('9')" value="9">9</button>
   
-  <div class="column col2" >
-    <div><h2 class="head-h2">Choose the Limit to Calculate?</h2></div>
-    <div class="row">
-      <div class="column1">
-        <mat-form-field>
-          <input matInput [(ngModel)]="name" placeholder=".">
-        </mat-form-field>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="openDialog()">PYp</button>
-        </div>
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_2Dialog()">Pp</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_3Dialog()">PT</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_1Dialog()">PE</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_4Dialog()">Ve</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_5Dialog()">Pb</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_6Dialog()">HP</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_7Dialog()">A-Ap</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_8Dialog()">B-Ap</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_9Dialog()">DD</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_10Dialog()">DD1hr</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_11Dialog()">PI</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_12Dialog()">Vc</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_13Dialog()">Vs</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_14Dialog()">Pr</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_15Dialog()">KH</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_16Dialog()">SK</button>
-        </div>  
-      </div>
-      <div class="column1">
-        <div class="floatClass">
-          <mat-form-field>
-            <input matInput [(ngModel)]="name" placeholder="">
-          </mat-form-field>
-        </div>
-        <div>
-          <button class="btnClass" mat-raised-button (click)="open_21Dialog()">PINext</button>
-        </div>  
-      </div>
-      </div>
-    </div>
-      
-    <h4 *ngIf="color">
-      You selected: <p style="font-weight: bold">{{color}}</p>
-    </h4>
-  <div class="column" id="outer">
-    <div class="calculator"id="inner">
-      <input type="text" class="calculator-screen" [value]="currentNumber" disabled />   
-      <div class="calculator-keys">
+  
+      <button class="calculatorbutton" type="button" (click) = "getNumber('4')" value="4">4</button>
+      <button class="calculatorbutton" type="button" (click) = "getNumber('5')" value="5">5</button>
+      <button class="calculatorbutton" type="button" (click) = "getNumber('6')" value="6">6</button>
+  
+  
+      <button class="calculatorbutton" type="button" (click) = "getNumber('1')" value="1">1</button>
+      <button class="calculatorbutton" type="button" (click) = "getNumber('2')" value="2">2</button>
+      <button class="calculatorbutton" type="button" (click) = "getNumber('3')" value="3">3</button>
+  
+  
+      <button class="calculatorbutton" type="button" (click) = "getNumber('0')" value="0">0</button>
+  
+      <button class="calculatorbutton" type="button" (click) = "getDecimal()" class="decimal" value=".">.</button>
+      <button  class="calculatorbutton" type="button" (click) = "clear()"  class="all-clear" value="all-clear">AC</button>
 
-        <button class="calculatorbutton" type="button" (click) = "getOperation('+')" class="operator" value="+">+</button>
-        <button class="calculatorbutton" type="button" (click) = "getOperation('-')" class="operator" value="-">-</button>
-        <button class="calculatorbutton" type="button" (click) = "getOperation('*')" class="operator" value="*">&times;</button>
-        <button class="calculatorbutton" type="button" (click) = "getOperation('/')" class="operator" value="/">&divide;</button>
-            
-        <button class="calculatorbutton" type="button" (click) = "getNumber('7')" value="7">7</button>
-        <button class="calculatorbutton" type="button" (click) = "getNumber('8')" value="8">8</button>
-        <button class="calculatorbutton" type="button" (click) = "getNumber('9')" value="9">9</button>
-    
-    
-        <button class="calculatorbutton" type="button" (click) = "getNumber('4')" value="4">4</button>
-        <button class="calculatorbutton" type="button" (click) = "getNumber('5')" value="5">5</button>
-        <button class="calculatorbutton" type="button" (click) = "getNumber('6')" value="6">6</button>
-    
-    
-        <button class="calculatorbutton" type="button" (click) = "getNumber('1')" value="1">1</button>
-        <button class="calculatorbutton" type="button" (click) = "getNumber('2')" value="2">2</button>
-        <button class="calculatorbutton" type="button" (click) = "getNumber('3')" value="3">3</button>
-    
-    
-        <button class="calculatorbutton" type="button" (click) = "getNumber('0')" value="0">0</button>
-    
-        <button class="calculatorbutton" type="button" (click) = "getDecimal()" class="decimal" value=".">.</button>
-        <button  class="calculatorbutton" type="button" (click) = "clear()"  class="all-clear" value="all-clear">AC</button>
-
-        <button class="calculatorbutton" type="button" (click) = "getOperation('=')" class="equal-sign" value="=">=</button>
-      </div>
+      <button class="calculatorbutton" type="button" (click) = "getOperation('=')" class="equal-sign" value="=">=</button>
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="column2">
-
-  </div>
-  <div class="column2">
-    <div class="floatClass">
-    <h2 class="head-h2">Horner Plot</h2>
-  </div>
-<highcharts-chart
-   [Highcharts] = "highcharts" 
-   [options] = "chartOptions" 
-   style = "width: 100%; height: 360px; display: block;">
-</highcharts-chart>
-  </div>
-  <div class="column2">
-    
-  </div>
 </div>
+<br>

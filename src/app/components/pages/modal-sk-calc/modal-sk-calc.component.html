@@ -1,0 +1,38 @@
+<div class="column modal">
+    <div class="modal-head"></div>
+    <h2 mat-dialog-title></h2>
+    <label>q</label>
+    <input type="text" [(ngModel)]="number1" placeholder="1"><br><br>
+    <label>u</label>
+    <input type="text" [(ngModel)]="number2" placeholder="1"><br><br>
+    <label>Bo</label>
+    <input type="text" [(ngModel)]="number3" placeholder="1"><br><br>
+    <label>phi</label>
+    <input type="text" [(ngModel)]="number4" placeholder="1"><br><br>
+    <label>c</label>
+    <input type="text" [(ngModel)]="number5" placeholder="1"><br><br>
+    <label>rw</label>
+    <input type="text" [(ngModel)]="number6" placeholder="1"><br><br>
+    <label>H</label>
+    <input type="text" [(ngModel)]="number7" placeholder="1"><br><br>
+
+    <!--div mat-dialog-content>
+    
+    <p>What's your favorite color?</p>
+    <mat-form-field>
+      <input type="text" [(ngModel)]="number2" placeholder="1"><br><br>
+      <input matInput [(ngModel)]="data.color">
+  
+      <input type="text" [(ngModel)]="number3" placeholder="1"><br><br>
+    </mat-form-field>
+  </div-->
+  <div mat-dialog-actions>
+    <button class="btnClass" (click)="calcSKCalc()" value="Calc.SKCalc">Calc</button> <br>
+    <button class="buttonClass" mat-button (click)="onNoClick()">No Thanks</button>
+    <button class="buttonClass" mat-button [mat-dialog-close]="data.color" cdkFocusInitial>OK</button>
+    </div> 
+    <br><br>
+    
+    <b>Calculated Skin is: </b> <b>{{resultSKCalc}} </b>
+  </div>
+

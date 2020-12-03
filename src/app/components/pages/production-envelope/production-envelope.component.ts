@@ -31,12 +31,19 @@ import { ModalSkComponent } from './../modal-sk/modal-sk.component';
 import { ModalDdComponent } from './../modal-dd/modal-dd.component';
 import { ModalPiComponent }  from './../modal-pi/modal-pi.component';
 import { ModalPiNextComponent }  from './../modal-pi-next/modal-pi-next.component';
+import { ModalDDthrCalcComponent}  from './../modal-ddthr-calc/modal-ddthr-calc.component';
+import { ModalPICalcComponent}  from './../modal-pi-calc/modal-pi-calc.component';
+import { ModalKHCalcComponent}  from './../modal-kh-calc/modal-kh-calc.component';
+import { ModalSKCalcComponent}  from './../modal-sk-calc/modal-sk-calc.component';
+
 
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import regression from 'regression';
+import { ActivatedRoute } from '@angular/router'; 
+import { SharedServiceService } from '../../../shared-service.services';
 
 /**
  * Food data with nested structure.
@@ -82,9 +89,12 @@ interface ExampleFlatNode {
   styleUrls: ['./production-envelope.component.scss']
 })
 export class ProductionEnvelopeComponent implements OnInit {
-  
+ 
   // Modal ts file
-  constructor(public dialog: MatDialog) { this.dataSource.data = TREE_DATA; }
+  constructor(public dialog: MatDialog,
+    public activatedRoute: ActivatedRoute, 
+    public sharedService: SharedServiceService)
+    { this.dataSource.data = TREE_DATA; }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(MyModalComponent, {
@@ -95,6 +105,7 @@ export class ProductionEnvelopeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(res => {
       this.color = res;
     });
+
   }
   
   name: string;
@@ -299,6 +310,51 @@ open_11Dialog(): void {
           this.color = res;
         });
       }
+
+         /*---------------------------------------*/
+         open_100Dialog(): void {
+          const dialogRef = this.dialog.open(ModalDDthrCalcComponent, {
+            width: '250px',
+            data: { name: this.name, color: this.color }
+          });
+      
+          dialogRef.afterClosed().subscribe(res => {
+            this.color = res;
+          });
+        }
+         /*---------------------------------------*/
+         open_101Dialog(): void {
+          const dialogRef = this.dialog.open(ModalPICalcComponent, {
+            width: '250px',
+            data: { name: this.name, color: this.color }
+          });
+      
+          dialogRef.afterClosed().subscribe(res => {
+            this.color = res;
+          });
+        }
+          /*---------------------------------------*/
+          open_102Dialog(): void {
+            const dialogRef = this.dialog.open(ModalKHCalcComponent, {
+              width: '250px',
+              data: { name: this.name, color: this.color }
+            });
+        
+            dialogRef.afterClosed().subscribe(res => {
+              this.color = res;
+            });
+          }
+            /*---------------------------------------*/
+         open_103Dialog(): void {
+          const dialogRef = this.dialog.open(ModalSKCalcComponent, {
+            width: '250px',
+            data: { name: this.name, color: this.color }
+          });
+      
+          dialogRef.afterClosed().subscribe(res => {
+            this.color = res;
+          });
+        }
   //____________________________________________________________________//
   currentNumber = '0';
   firstOperand = null;
@@ -447,7 +503,7 @@ open_11Dialog(): void {
     'A-ANNULUS PRESSURE (A-Ap) : Calc-Items: Burst Pressure (Pb), fluid density (pm), hydrostatic head',
     'B-ANNULUS PRESSURE (B-Ap) : Calc-Items: Burst Pressure (Pb), fluid density (pm), hydrostatic head',
     'TOTAL DRAWDOWN (DD) : Calc-Items: Reservoir Pressure (Pr), Flowing Pressure(Pwf)',
-    'DRAWDOWN 1 HOUR (DD1hr): Calc-Items: Pressure build up after 1hr (P1hr), Flowing Pressure(Pwf)',  
+    'DRAWDOWN t HOURs (DDthr): Calc-Items: Pressure build up after t hr (Pthr), Flowing Pressure(Pwf)',  
     'PRODUCTIVITY INDEX: Calc-Items: Flow Rate (Q), Total Drawdown (DD)',
     'CASING ENTRANCE VELOCITY (ft/sec) (Vc): Well Discharge (Q-gpm), radius of casing perforation -in (r),  length of well cased perf -ft- (b), percentage open area of the casing (P)',
     'SCREEN ENTRANCE VELOCITY (ft/sec) (Vc): Well Discharge (Q-gpm), radius of well screen -in (r),  length of well screen -ft- (b), percentage open area of the screen (P)', 
@@ -525,6 +581,16 @@ open_11Dialog(): void {
   result = regression.linear(this.newArray, {precision: 8});
   gradient =this.result.equation[0];
   yIntercept = this.result.equation[1];
+
+  // Delta1hr
+  timeAtZeroHr=this.timeData[0];
+  timeAttHr = this.timeData[5];
+  DeltaTimetHr = +this.timeAttHr-this.timeData[0];
+  DerivativeTimetHr = (+this.timeAttHr + this.DeltaTimetHr)/this.DeltaTimetHr;
+  logDerivativeTimetHr = Math.log(this.DerivativeTimetHr);
+
+  //Extrapolate straight line to logDerivativeTimeOneHr (this will give you pwf1hr)
+  Pwfthr = this.gradient*this.logDerivativeTimetHr + this.yIntercept;
   
   title = 'Horner Plot';
   
@@ -580,7 +646,8 @@ open_11Dialog(): void {
    };
 
   ngOnInit() {
-  console.log(this.PressDataForLineWorkSpace.sort())    
+  console.log(this.PressDataForLineWorkSpace.sort());
+  console.log(this.timeData[12]);
   }
 
 }
